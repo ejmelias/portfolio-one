@@ -1,9 +1,11 @@
 "use client"
 import { useState } from 'react'
 import Link from 'next/link'
+import { useSelectedLayoutSegment } from 'next/navigation'
 
 export default function MobileNav() {
     const [navShow, setNavShow] = useState(false)
+    const segment = useSelectedLayoutSegment()
 
     const onToggleNav = () => {
         setNavShow((status) => {
@@ -30,7 +32,7 @@ export default function MobileNav() {
                 </svg>
             </button>
             <div
-                className={`fixed top-0 left-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out dark:bg-gray-800 ${navShow ? 'translate-x-0' : 'translate-x-full'}`}
+                className={`fixed top-0 left-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out  ${navShow ? 'translate-x-0' : 'translate-x-full'}`}
             >
                 <div className="flex justify-end">
                     <button
@@ -45,40 +47,40 @@ export default function MobileNav() {
                     </button>
                 </div>
                 <nav className="fixed mt-8 h-full w-full justify-center text-center">
-                    <div className="px-12 py-4">
+                    <div className={`px-12 py-4 border ${segment === 'about' ? 'bg-[#45517a] text-white' : ''}`}>
                         <Link
                             href={'/about'}
-                            className="text-3xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+                            className={`text-3xl font-bold tracking-widest`}
                             onClick={onToggleNav}
                         >
-                            About
+                            ABOUT
                         </Link>
                     </div>
-                    <div className="px-12 py-4">
+                    <div className={`px-12 py-4 border ${segment === 'projects' ? 'bg-[#45517a] text-white' : ''}`}>
                         <Link
-                            href={'/services'}
-                            className="text-3xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+                            href={'/projects'}
+                            className={`text-3xl font-bold tracking-widest`}
                             onClick={onToggleNav}
                         >
-                            Services
+                            PROJECTS
                         </Link>
                     </div>
-                    <div className="px-12 py-4">
+                    <div className={`px-12 py-4 border ${segment === 'blog' ? 'bg-[#45517a] text-white' : ''}`}>
                         <Link
                             href={'/blog'}
-                            className="text-3xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+                            className={`text-3xl font-bold tracking-widest`}
                             onClick={onToggleNav}
                         >
-                            Blog
+                            BLOG
                         </Link>
                     </div>
-                    <div className="px-12 py-4">
+                    <div className={`px-12 py-4 border ${segment === 'contact' ? 'bg-[#45517a] text-white' : ''}`}>
                         <Link
                             href={'/contact'}
-                            className="text-3xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+                            className={`text-3xl font-bold tracking-widest`}
                             onClick={onToggleNav}
                         >
-                            Contact
+                            CONTACT
                         </Link>
                     </div>
                 </nav>

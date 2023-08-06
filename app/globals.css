@@ -18,3 +18,22 @@ body {
   padding: 0;
   background: rgb(255, 255, 255);
 }
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Add the 'animate-slide' class and reference the custom animation */
+.animate-slide {
+    animation: slideAnimation 2s linear infinite;
+}
