@@ -1,6 +1,6 @@
 "use client"
 import * as THREE from 'three'
-import { useRef } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { Html, shaderMaterial, useGLTF } from '@react-three/drei'
 import { extend, useFrame } from '@react-three/fiber'
 import distortFragment from '@/shaders/distortFragment.glsl'
@@ -27,16 +27,41 @@ const ShadMaterial = shaderMaterial(
 extend({ ShadMaterial })
 
 export default function Model() {
+    const [mouseX, setMouseX] = useState(0)
+    const [mouseY, setMouseY] = useState(0)
     const { nodes } = useGLTF('./model.glb')
     const distortRef = useRef()
     const shadowRef = useRef()
     const sceneRef = useRef()
 
+    const lerp = (start, end, t) => start * (1 - t) + end * t;
+
+    const handleMouseMove = (event) => {
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        // Calculate normalized mouse position
+        setMouseX(event.clientX / screenWidth - 0.5)
+        setMouseY(event.clientY / screenHeight - 0.5)
+    }
+
+    useEffect(() => {
+        window.addEventListener('mousemove', handleMouseMove)
+
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove)
+        }
+    }, [])
+
     useFrame((state, delta) => {
         distortRef.current.uTime += delta * 0.05
         shadowRef.current.uTime += delta
-        //sceneRef.current.position.x = state.pointer.x
-        //sceneRef.current.position.y = state.pointer.y
+
+        sceneRef.current.rotation.y += ((mouseX)/3 - sceneRef.current.rotation.y) * 0.001
+        sceneRef.current.rotation.x += ((mouseY)/3 - sceneRef.current.rotation.x) * 0.001
+
+        sceneRef.current.position.y += ((mouseY) - sceneRef.current.position.y) * 0.01
+        sceneRef.current.position.x += ((mouseX) - sceneRef.current.position.x) * 0.01
     })
 
     return (
