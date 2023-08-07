@@ -10,10 +10,17 @@ export default function Footer() {
                     <SocialIcon kind="github" href={'http://github.com'} size="24" />
                     <SocialIcon kind="linkedin" href={'http://linkedin.com'} size="24" />
                 </div>
-                <div className='mb-3 w-36 border border-[#45517a] relative'>
-                    <div className='w-12 h-3 bg-[#45517a] animate-slide' />
+
+                <div className='flex flex-row items-center'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-3 h-3 mr-1">
+                        <path strokeLinecap="square" strokeLinejoin="square" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
+                    </svg>
+
+                    <div className=' w-36 border border-midnight relative'>
+                        <div className='w-12 h-3 bg-midnight animate-slide' />
+                    </div>
                 </div>
-                <div className="mb-2 flex space-x-2 text-sm text-[#45517a]">
+                <div className="mb-2 flex space-x-2 text-sm text-midnight">
                     <div>{'James Elias'}</div>
                     <div>{` • `}</div>
                     <div>{`© ${new Date().getFullYear()}`}</div>

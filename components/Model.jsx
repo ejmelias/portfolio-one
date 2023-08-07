@@ -61,7 +61,7 @@ export default function Model() {
         sceneRef.current.rotation.x += ((mouseY)/3 - sceneRef.current.rotation.x) * 0.001
 
         sceneRef.current.position.y += ((mouseY) - sceneRef.current.position.y) * 0.01
-        sceneRef.current.position.x += ((mouseX) - sceneRef.current.position.x) * 0.01
+        sceneRef.current.position.x += ((-mouseX) - sceneRef.current.position.x) * 0.01
     })
 
     return (
