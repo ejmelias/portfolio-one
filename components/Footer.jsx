@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="mt-16 flex flex-col items-end">
                 <div className=" flex space-x-4">
                     <SocialIcon kind="mail" href={'mailto:example@email.com'} size="24" />
-                    <SocialIcon kind="github" href={'http://github.com'} size="24" />
+                    <SocialIcon kind="github" href={'https://github.com/ejmelias'} size="24" />
                     <SocialIcon kind="linkedin" href={'http://linkedin.com'} size="24" />
                 </div>
 

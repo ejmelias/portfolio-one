@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
 
                     {/*content*/}
                     <div className={`z-10 max-w-5xl flex-grow flex items-center justify-center ${dotgothic.className}`}>
-                        <div className='p-5 '>
+                        <div className='p-5 text-2xl'>
                             {children}
                         </div>
                     </div>

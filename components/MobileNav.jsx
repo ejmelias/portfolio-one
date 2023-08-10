@@ -73,6 +73,15 @@ export default function MobileNav() {
                             BLOG
                         </Link>
                     </div>
+                    <div className={`px-12 py-4  ${segment === 'experiments' ? 'bg-midnight text-white' : ''}`}>
+                        <Link
+                            href={'/experiments'}
+                            className={`text-3xl font-bold tracking-widest`}
+                            onClick={onToggleNav}
+                        >
+                            EXPERIMENTS
+                        </Link>
+                    </div>
                     <div className={`px-12 py-4  ${segment === 'contact' ? 'bg-midnight text-white' : ''}`}>
                         <Link
                             href={'/contact'}

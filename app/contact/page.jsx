@@ -1,22 +1,16 @@
 
 export const metadata = {
     title: 'Contact',
-    description: 'r3f + next.js contact information',
+    description: 'Get in contact with me.',
 }
 
 export default function page() {
 
     return (
-        <div className="text-center">
-            <div className="group">
-                Phone: (555)555-5555
-            </div>
-            <div className="group">
-                email: 123@example.com
-            </div>
-            <div className="group">
-                map
-            </div>
+        <div className="text-center bg-gray-200/50 p-5 text-2xl space-y-2">
+            <div>Get in touch:</div>
+            <div><a href="mailto:ejmelias@gmail.com" className="underline">Email</a></div>
+            <div><a href="https://github.com/ejmelias" className="underline">Github</a></div>
         </div>
     )
 }
