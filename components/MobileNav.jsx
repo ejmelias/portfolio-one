@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
+import MenuButton from '@/components/MenuButton'
 
 export default function MobileNav() {
     const [navShow, setNavShow] = useState(false)
@@ -23,13 +24,11 @@ export default function MobileNav() {
         <div className="md:hidden">
             <button
                 type="button"
-                className="h-8 w-8 rounded"
+                className="h-9 w-9 rounded"
                 aria-label="Toggle Menu"
                 onClick={onToggleNav}
             >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
-                    <path strokeLinecap="square" strokeLinejoin="square" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
+                <MenuButton />
             </button>
             <div
                 className={`fixed top-0 left-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out  ${navShow ? 'translate-x-0' : 'translate-x-full'}`}
@@ -47,7 +46,7 @@ export default function MobileNav() {
                     </button>
                 </div>
                 <nav className="fixed mt-8 h-full w-full justify-center text-center">
-                    <div className={`px-12 py-4 border ${segment === 'about' ? 'bg-midnight text-white' : ''}`}>
+                    <div className={`px-12 py-4  ${segment === 'about' ? 'bg-midnight text-white' : ''}`}>
                         <Link
                             href={'/about'}
                             className={`text-3xl font-bold tracking-widest`}
@@ -56,7 +55,7 @@ export default function MobileNav() {
                             ABOUT
                         </Link>
                     </div>
-                    <div className={`px-12 py-4 border ${segment === 'projects' ? 'bg-midnight text-white' : ''}`}>
+                    <div className={`px-12 py-4  ${segment === 'projects' ? 'bg-midnight text-white' : ''}`}>
                         <Link
                             href={'/projects'}
                             className={`text-3xl font-bold tracking-widest`}
@@ -65,7 +64,7 @@ export default function MobileNav() {
                             PROJECTS
                         </Link>
                     </div>
-                    <div className={`px-12 py-4 border ${segment === 'blog' ? 'bg-midnight text-white' : ''}`}>
+                    <div className={`px-12 py-4  ${segment === 'blog' ? 'bg-midnight text-white' : ''}`}>
                         <Link
                             href={'/blog'}
                             className={`text-3xl font-bold tracking-widest`}
@@ -74,7 +73,7 @@ export default function MobileNav() {
                             BLOG
                         </Link>
                     </div>
-                    <div className={`px-12 py-4 border ${segment === 'contact' ? 'bg-midnight text-white' : ''}`}>
+                    <div className={`px-12 py-4  ${segment === 'contact' ? 'bg-midnight text-white' : ''}`}>
                         <Link
                             href={'/contact'}
                             className={`text-3xl font-bold tracking-widest`}

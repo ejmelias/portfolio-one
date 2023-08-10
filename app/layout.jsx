@@ -34,10 +34,11 @@ export default function RootLayout({ children }) {
                         {/*Title*/}
                         <div className="p-6 flex md:justify-start justify-between items-center static md:bg-none">
                             <Link
-                                className="flex pointer-events-auto md:p-0"
+                                className="flex flex-col pointer-events-auto md:p-0"
                                 href="/"
                             >
-                                <h1 className='text-3xl md:text-8xl lg:text-9xl'>JAMES ELIAS</h1>
+                                <h1 className='text-3xl md:text-8xl lg:text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-purple-500 to-midnight to-70%'>JAMES ELIAS</h1>
+                                <div className='text-[0.25em] md:text-xs lg:text-base tracking-[1.5em]'>TACTICAL ESPIONAGE ACTION</div>
                             </Link>
                             <div className={silkscreen.className}>
                                 <MobileNav />
@@ -51,13 +52,19 @@ export default function RootLayout({ children }) {
                         </div>
                     </div>
 
-                    <div className={`hidden md:block absolute top-0 right-0 p-6 z-10 text-3xl ${barcode.className}`}>
-                        abcd
+                    <div className='hidden md:block absolute top-0 right-0 p-6 z-10'>
+                        <div className={`text-xs ${barcode.className}`}>
+                            acd&nbsp;i5&nbsp;1qqacd&nbsp;i5&nbsp;1qq
+                        </div>
+                        <div className={`text-xs justify-end flex flex-row ${silkscreen.className}`}>
+                            0x
+                            <RandomText text={'000000'} interval={1500} />
+                        </div>
                     </div>
-                    
+
                     {/*content*/}
                     <div className={`z-10 max-w-5xl flex-grow flex items-center justify-center ${dotgothic.className}`}>
-                        <div className='p-5'>
+                        <div className='p-5 '>
                             {children}
                         </div>
                     </div>
@@ -76,7 +83,7 @@ export default function RootLayout({ children }) {
                             <div className='h-1 w-16  bg-midnight' />
                             <div className='h-1 w-32  bg-midnight' />
                             <div className={`${barcode.className}`}>
-                                ab &nbsp; e &nbsp; dkfj 
+                                ab &nbsp; e&nbsp; dkf
                             </div>
                         </div>
                         <Footer/>

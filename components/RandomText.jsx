@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react'
 
 function getRandomText(length) {
     //const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-    const characters = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポ'
+    //const characters = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポ'
+    const characters = 'ABCDEF123456789'
     let result = ''
     for (let i = 0; i < length; i++) {
         result += characters.charAt(Math.floor(Math.random() * characters.length))
@@ -16,7 +17,7 @@ export default function RandomText({ text, interval }) {
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setRandomText(getRandomText(Math.random() * text.length))
+            setRandomText(getRandomText(text.length))
         }, interval)
 
         return () => clearInterval(intervalId)
