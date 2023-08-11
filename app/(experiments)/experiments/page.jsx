@@ -1,14 +1,22 @@
-export const metadata = {
-    title: 'Expermiments',
-    description: 'Graphical experiments with Three.js',
-}
+"use client"
+import { useFrame } from "@react-three/fiber"
+import { useRef } from "react"
 
 export default function page() {
+    const ref = useRef()
+
+    useFrame((state, delta) => {
+        ref.current.rotation.y += delta
+        ref.current.rotation.x += delta
+    })
 
     return (
-        <div className="">
-            experiments
-        </div>
+        <>
+            <mesh ref={ref}>
+                <boxGeometry />
+                <meshNormalMaterial />
+            </mesh>
+        </>
     )
 }
 

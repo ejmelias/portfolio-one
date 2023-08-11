@@ -1,8 +1,7 @@
 
 
-import './globals.css'
+import '../globals.css'
 import { DotGothic16, Questrial ,Silkscreen, Libre_Barcode_39_Extended, Noto_Sans_JP } from 'next/font/google'
-import Image from 'next/image'
 import Link from 'next/link'
 import Background from '@/components/Background'
 import MobileNav from '@/components/MobileNav'
@@ -19,7 +18,7 @@ const japanese = Noto_Sans_JP({subsets: ['latin']})
 
 export const metadata = {
     title: 'JAMES ELIAS',
-    description: 'A minimal starter for Nextjs + React-three-fiber and Threejs.',
+    description: 'James Elias\'s developer portfolio',
 }
 
 export default function RootLayout({ children }) {

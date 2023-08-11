@@ -1,15 +1,14 @@
 "use client"
 import { Canvas } from '@react-three/fiber'
-import Model from '@/components/Model'
 import { Suspense } from 'react'
 import LoadingSpinner from '@/components/LoadingSpinner'
 
-export default function Background() {
+export default function ExperimentCanvas({ children }) {
     return (
         <div className='fixed w-screen h-screen m-0 p-0'>
             <Suspense fallback={<LoadingSpinner />}>
-                <Canvas camera={{ fov: 35 }}>
-                    <Model />
+                <Canvas >
+                    {children}
                 </Canvas>
             </Suspense>
         </div>
