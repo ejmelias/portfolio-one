@@ -1,7 +1,7 @@
 
 
 import '../globals.css'
-import { DotGothic16, Questrial ,Silkscreen, Libre_Barcode_39_Extended, Noto_Sans_JP } from 'next/font/google'
+import { DotGothic16, Questrial ,Silkscreen, Libre_Barcode_39_Extended, Noto_Sans_JP, Noto_Sans_Mono } from 'next/font/google'
 import Link from 'next/link'
 import Background from '@/components/Background'
 import MobileNav from '@/components/MobileNav'
@@ -9,12 +9,14 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Bars from '@/components/Bars'
 import RandomText from '@/components/RandomText'
+import Subtitle from '@/components/Subtitle'
 
 const dotgothic = DotGothic16({ subsets: ['latin'], weight: '400' })
 const questrial= Questrial({ subsets: ['latin'], weight: '400' })
 const silkscreen = Silkscreen({ subsets: ['latin'], weight: '400' })
 const barcode = Libre_Barcode_39_Extended({ subsets: ['latin'], weight: '400' })
 const japanese = Noto_Sans_JP({subsets: ['latin']})
+const mono = Noto_Sans_Mono({ subsets: ['latin'], weight: '300' })
 
 export const metadata = {
     title: 'JAMES ELIAS',
@@ -37,7 +39,7 @@ export default function RootLayout({ children }) {
                                 href="/"
                             >
                                 <h1 className='text-3xl md:text-8xl lg:text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-purple-500 to-midnight to-70%'>JAMES ELIAS</h1>
-                                <div className='text-[0.25em] md:text-xs lg:text-base tracking-[1.5em]'>TACTICAL ESPIONAGE ACTION</div>
+                                <div className={`${mono.className} text-[0.25em] md:text-xs lg:text-base text-center`}><Subtitle/></div>
                             </Link>
                             <div className={silkscreen.className}>
                                 <MobileNav />

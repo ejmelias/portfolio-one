@@ -43,7 +43,6 @@ export default function Waves() {
         uColorMultiplier: { value: 2, max: 10, min: 0, step: 0.001, label: "color multiplier" },
 
     })
-    const { showPerf } = useControls({ showPerf: { value: false, label: "stats" } })
 
     const waveMaterial = useRef()
 
@@ -53,7 +52,6 @@ export default function Waves() {
 
     return (
         <>
-            {showPerf && <Perf position="top-left" />}
             <OrbitControls />
             <mesh>
                 <sphereGeometry args={[2, 512, 512]} />

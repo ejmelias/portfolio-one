@@ -1,7 +1,6 @@
 "use client"
-import * as THREE from 'three'
 import { useRef, useEffect, useState } from 'react'
-import { Html, shaderMaterial, useGLTF } from '@react-three/drei'
+import { shaderMaterial, useGLTF } from '@react-three/drei'
 import { extend, useFrame } from '@react-three/fiber'
 import distortFragment from '@/shaders/distortFragment.glsl'
 import distortVertex from '@/shaders/distortVertex.glsl'
