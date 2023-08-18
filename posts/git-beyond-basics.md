@@ -62,7 +62,8 @@ GitHub and GitLab offer pull requests (or merge requests) for collaborative code
 
 To generate a patch file:
 ```
-git format-patch <base-commit>..<feature-branch>
+git format-patch 
+<base-commit>..<feature-branch>
 ```
 
 ## Wrapping Up
