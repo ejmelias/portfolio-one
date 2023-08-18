@@ -14,7 +14,7 @@ const PostLayout = ({ params }) => {
     if (!post) throw new Error(`Post not found for slug: ${params.slug}`)
 
     return (
-        <article className="prose-sm">
+        <article className="prose-sm prose-code:bg-gray-50">
             <div className="mb-8 text-center">
                 <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
                     {format(parseISO(post.date), 'LLLL d, yyyy')}

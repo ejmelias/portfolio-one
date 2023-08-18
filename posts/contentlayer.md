@@ -3,7 +3,7 @@ title: 'Generating Static Pages with Next.js Contentlayer'
 date: '2023-08-18'
 ---
 
-In the ever-evolving landscape of web development, creating performant and dynamic websites has become a top priority. The rise of static site generators has enabled developers to achieve blazing-fast loading times and exceptional user experiences. One tool that stands out in this domain is Next.js Contentlayer, a powerful framework that leverages the simplicity of Markdown files to generate stunning static pages. In this blog post, we'll explore how Next.js Contentlayer can be used to supercharge your developer portfolio.
+In the ever-evolving landscape of web development, creating performant and dynamic websites has become a top priority. The rise of static site generators has enabled developers to achieve blazing-fast loading times and exceptional user experiences. One tool that stands out in this domain is Next.js Contentlayer, a powerful framework that leverages the simplicity of Markdown files to generate stunning static pages. In this blog post, we'll explore how Next.js Contentlayer can be used to supercharge your website.
 
 ## What is Next.js Contentlayer?
 
