@@ -55,6 +55,7 @@ export default function Grid() {
 
     return (
         <>
+            <color attach="background" args={['black']} />
             <OrbitControls />
             <instancedMesh ref={meshRef} args={[null, null, length]}>
                 <boxGeometry ref={geometryRef} args={[0.15, 0.15, 0.15]}>

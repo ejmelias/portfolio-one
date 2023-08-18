@@ -9,7 +9,7 @@ export default function ExperimentNav() {
     return (
         <nav className = 'z-20 flex flex-col bg-gray-200/75 border border-midnight/50 divide-y divide-midnight/50' >
             <Link href={'/'} className='hover:text-white hover:bg-midnight px-6 flex flex-row'>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="square" strokeLinejoin="square" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h10" />
                 </svg>
                 Home
@@ -22,6 +22,9 @@ export default function ExperimentNav() {
             </a>
             <a href={'/experiments/fbo-particles'} className={`${segment === 'fbo-particles' ? 'bg-midnight text-white' : 'hover:text-white hover:bg-midnight'} px-6`}>
                 FBO
+            </a>
+            <a href={'/experiments/ascii'} className={`${segment === 'ascii' ? 'bg-midnight text-white' : 'hover:text-white hover:bg-midnight'} px-6`}>
+                ASCII
             </a>
         </nav >
     )
