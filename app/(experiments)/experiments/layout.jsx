@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={silkscreen.className}>
-                <main className="flex flex-col min-h-full items-start text-midnight">
+                <main className="flex flex-col min-h-full items-start text-midnight bg-gray-200">
                     <ExperimentCanvas>
                         {children}
                     </ExperimentCanvas>
