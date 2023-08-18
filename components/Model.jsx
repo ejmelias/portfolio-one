@@ -28,7 +28,7 @@ extend({ ShadMaterial })
 export default function Model() {
     const [mouseX, setMouseX] = useState(0)
     const [mouseY, setMouseY] = useState(0)
-    const { nodes } = useGLTF('./model.glb')
+    const { nodes } = useGLTF('../../model.glb')
     const distortRef = useRef()
     const shadowRef = useRef()
     const sceneRef = useRef()
