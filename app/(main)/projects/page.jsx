@@ -16,7 +16,7 @@ function Arrow() {
 export default function page() {
 
     return (
-        <div className="bg-gray-200/50 p-5 space-y-5">
+        <div className="bg-gray-200/50 p-5 space-y-8 border-midnight/30 border">
             <div>
                 <div className="flex flex-row items-center">
                     <a href="https://www.loomlogic.app/" target="_blank" rel="noopener noreferrer" className="underline font-extrabold text-3xl">Loom Logic </a>

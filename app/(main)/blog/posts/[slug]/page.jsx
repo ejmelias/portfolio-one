@@ -10,7 +10,6 @@ export const generateMetadata = ({ params }) => {
 }
 
 const PostLayout = ({ params }) => {
-    console.log(params)
     const post = allPosts.find((post) => post._raw.flattenedPath === params.slug)
     if (!post) throw new Error(`Post not found for slug: ${params.slug}`)
 
