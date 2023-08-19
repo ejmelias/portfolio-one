@@ -1,4 +1,4 @@
-export default function LoadingSpinner() {
+export default function LoadingSpinner({ colour='#fff' }) {
     return (
         <div className="fixed inset-0 flex items-center justify-center">
             <svg
@@ -9,7 +9,7 @@ export default function LoadingSpinner() {
                 preserveAspectRatio="xMidYMid"
                 className="animate-spin"
             >
-                <circle cx="50" cy="50" fill="none" stroke="#fff" opacity={0.2} strokeWidth="10" r="35" strokeDasharray="164.93361431346415 56.97787143782138">
+                <circle cx="50" cy="50" fill="none" stroke={colour} opacity={0.2} strokeWidth="10" r="35" strokeDasharray="164.93361431346415 56.97787143782138">
                     <animateTransform
                         attributeName="transform"
                         type="rotate"
