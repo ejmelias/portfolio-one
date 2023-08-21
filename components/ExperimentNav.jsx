@@ -26,6 +26,9 @@ export default function ExperimentNav() {
             <a href={'/experiments/ascii'} className={`${segment === 'ascii' ? 'bg-midnight text-white' : 'hover:text-white hover:bg-midnight'} px-6`}>
                 ASCII
             </a>
+            <a href={'/experiments/pixelation'} className={`${segment === 'pixelation' ? 'bg-midnight text-white' : 'hover:text-white hover:bg-midnight'} px-6`}>
+                PIXELATION
+            </a>
         </nav >
     )
 }
