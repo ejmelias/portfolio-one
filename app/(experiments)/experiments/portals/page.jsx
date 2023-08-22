@@ -25,7 +25,7 @@ export default function page() {
                     <Model position={[0, -0.5, -0.1]} rotation={[0, -Math.PI / 2, 0]} scale={1.5} castShadow/>
                 </mesh>
                 <AccumulativeShadows temporal frames={100} scale={10} position={[0, -0.5, 0]}>
-                    <RandomizedLight amount={8} position={[5, 5, -10]} />
+                    <RandomizedLight amount={3} position={[5, 5, -10]} />
                 </AccumulativeShadows>
             </Frame>
             <Model position={[0, -0.5, -0.1]} rotation={[0, -Math.PI / 2, 0]} scale={1.5} clip/>
