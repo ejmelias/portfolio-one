@@ -19,26 +19,6 @@ export default function Nav() {
             </Link>
 
             <Link
-                href={"/projects"}
-                className="group rounded-lg "
-            >
-                <h2 className={`px-3 text-1xl font-semibold justify-between flex flex-row items-center ${segment === 'projects' ? 'bg-midnight text-white' : 'hover:text-white hover:bg-midnight'}`}>
-                    PROJECTS
-                    <span className='text-xs'>xx1</span>
-                </h2>
-            </Link>
-
-            <Link
-                href={'/blog'}
-                className="group rounded-lg "
-            >
-                <h2 className={`px-3 text-1xl font-semibold justify-between flex flex-row items-center ${segment === 'blog' ? 'bg-midnight text-white' : 'hover:text-white hover:bg-midnight'}`}>
-                    Blog
-                    <span className='text-xs'>xx2</span>
-                </h2>
-            </Link>
-
-            <Link
                 href={'/experiments'}
                 className="group rounded-lg "
             >
